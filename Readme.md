@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Тимур Кудзаев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2440153).
-* Наставник: `Неизвестно`.
+* Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
 
 ---
 
