@@ -1,12 +1,237 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+    <wrapper class="wrapper">
+      <header class="header">
+        <div class="header__container _container">
+          <a href="#" class="header__logo">
+            <img src="img/head-logo.svg" alt="City of Sedona" />
+          </a>
+          <nav class="header__menu menu _active">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">О седоне</a>
+              </li>
+              <li class="menu__item">
+                <a href="catalog.html" class="menu__link">Гостиницы</a>
+              </li>
+              <li class="navigation-item navigation-item--mob">
+                <a class="navigation-button" href="#">Хочу сюда!</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+              <a href="" class="navigation-link">
+                <span class="visually-hidden"> Поиск </span>
+                <img src="./img/head-search.svg" alt="" />
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a href="" class="navigation-link">
+                <span class="visually-hidden"> Избранное </span>
+                <img src="./img/head-like-icon.svg" alt="" />
+              </a>
+            </li>
+            <li class="navigation-item navigation-item--desk">
+              <a class="navigation-button" href="#">Хочу сюда!</a>
+            </li>
+          </ul>
+          <div class="header-button">
+            <button class="icon-menu" type="button">
+              <span class="burger-line"></span>
+            </button>
+          </div>
+        </div>
+      </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+      <main class="main">
+        <!-- Main Part 1 -->
+        <section class="hero">
+          <div class="hero__container _container">
+            <h1 class="hero__visually-hidden">Судона город в Аризоне</h1>
+            <img
+              class="hero__img"
+              src="/img/main-img/welcome-img.svg"
+              width="458"
+              height="352"
+              alt="Welcome Sedona"
+            />
+          </div>
+        </section>
 
+        <!-- Main Part 2 -->
+        <section class="about-sedona">
+          <div class="about-sedona__container _container">
+            <p class="about-sedona__head head about-sedona__head--color-white">
+              Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне,
+              заслуживающий большего!
+            </p>
+            <p class="about-sedona__lead">
+              Рассмотрим причины, по&nbsp;которым Седона круче, чем
+              Гранд-Каньон!
+            </p>
+
+            <ul class="about-sedona__list">
+              <li class="about-sedona__item">
+                <h2
+                  class="about-sedona__title about-sedona__title--color-white card-title"
+                >
+                  Настоящий <br />
+                  городок
+                </h2>
+                <p
+                  class="about-sedona__desc about-sedona__desc--color-white desc"
+                >
+                  Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт
+                  своя жизнь
+                </p>
+              </li>
+              <li class="about-sedona__item">
+                <img
+                  src="/img/main-img/about-sedona-item-img-1.jpg"
+                  alt="Город Седона"
+                  width="800"
+                  height="385"
+                />
+              </li>
+              <li class="about-sedona__item">
+                <h2 class="about-sedona__title card-title">
+                  Небольшая <br />
+                  площадь
+                </h2>
+                <p class="about-sedona__desc desc">
+                  Все достопримечательности находятся очень близко
+                </p>
+              </li>
+              <li class="about-sedona__item">
+                <h2 class="about-sedona__title card-title">
+                  Красивая <br />
+                  дорога
+                </h2>
+                <p class="about-sedona__desc desc">
+                  Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!
+                </p>
+              </li>
+              <li class="about-sedona__item">
+                <h2 class="about-sedona__title card-title">
+                  Мало <br />
+                  туристов
+                </h2>
+                <p class="about-sedona__desc desc">
+                  Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там
+                </p>
+              </li>
+              <li class="about-sedona__item">
+                <img
+                  src="/img/main-img/about-sedona-item-img-2.jpg"
+                  width="800"
+                  height="385"
+                  alt="Умопомрачительный каньйон"
+                />
+              </li>
+              <li class="about-sedona__item">
+                <h2
+                  class="about-sedona__title about-sedona__title--color-white card-title"
+                >
+                  Там есть <br />
+                  мост дьявола
+                </h2>
+                <p
+                  class="about-sedona__desc desc about-sedona__desc--color-white"
+                >
+                  Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь,
+                  разумеется
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Main Part 3 -->
+        <section class="holiday-sedona">
+          <div class="holiday-sedona__container _container">
+            <p class="holiday-sedona__head head">
+              Приезжайте в&nbsp;Седону отдохнуть в&nbsp;комфорте и&nbsp;уюте!
+            </p>
+            <p class="holiday-sedona__lead">
+              Опытный персонал и&nbsp;качественное обслуживание!
+            </p>
+
+            <ul class="holiday-sedona__list">
+              <li class="holiday-sedona__item">
+                <img
+                  src="./img/main-img/icon/holiday-sedona-icon-1.svg"
+                  width="75"
+                  height="72"
+                  alt="Дом"
+                />
+                <h2 class="holiday-sedona__title card-title">Жильё</h2>
+                <p class="holiday-sedona__desc desc">
+                  Рекомендуем пожить в&nbsp;настоящем мотеле, всё как
+                  в&nbsp;кино!
+                </p>
+              </li>
+              <li class="holiday-sedona__item">
+                <img
+                  src="./img/main-img/icon/holiday-sedona-icon-2.svg"
+                  width="75"
+                  height="72"
+                  alt="Биг Спешиал"
+                />
+                <h2 class="holiday-sedona__title card-title">Еда</h2>
+                <p class="holiday-sedona__desc desc">
+                  Всегда заказывайте топовый фирменный бургер,
+                  вы&nbsp;не&nbsp;разочаруетесь!
+                </p>
+              </li>
+              <li class="holiday-sedona__item">
+                <img
+                  src="./img/main-img/icon/holiday-sedona-icon-3.svg"
+                  width="75"
+                  height="72"
+                  alt="Подарочная коробка"
+                />
+                <h2 class="holiday-sedona__title card-title">Сувениры</h2>
+                <p class="holiday-sedona__desc desc">
+                  Не&nbsp;только китайского, но&nbsp;и&nbsp;настоящего местного
+                  производства!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Main Part 4 -->
+        <section class="search-hotels">
+          <div class="search-hotels__container _container">
+            <h2 class="search-hotels__title head">Заинтересовались?</h2>
+            <p class="search-hotels__lead">
+              Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам
+              лучшие предложения гостиниц в&nbsp;Седоне
+            </p>
+            <a href="#" class="search-hotels__link">ПОИСК ГОСТИНИЦЫ В седоне</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"></footer>
+    </wrapper>
+    <script src="js/main.js"></script>
   </body>
 </html>
