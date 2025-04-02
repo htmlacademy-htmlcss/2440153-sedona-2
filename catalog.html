@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body>
+    <wrapper class="wrapper">
+      <header class="page-header">
+        <div class="navigation-container">
+          <a href="home.html" class="navigation-logo">
+            <img src="./img/header-img/head-logo.svg" width="138" height="64" alt="City of Sedona" />
+          </a>
+          <nav class="navigation-menu menu">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="home.html" class="menu-link">Главная </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">О седоне</a>
+              </li>
+              <li class="menu-item">
+                <a href="catalog.html" class="menu-link">Гостиницы</a>
+              </li>
+            </ul>
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <img src="./img/header-img/head-search.svg" width="20" height="20" alt="Поиск" />
+                <a class="navigation-link" href="#"> <span class="visually-hidden"> Поиск </span></a>
+              </li>
+              <li class="navigation-item">
+                <img src="./img/header-img/head-like.svg" width="20" height="20" alt="Избраное" />
+                <a class="navigation-link" href="#"><span class="visually-hidden"> Избранное </span></a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-button" href="#">Хочу сюда!</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="filters">
+          <h1 class="filters-title">Гостиницы Седоны</h1>
+          <nav aria-label="Хлебные крошки">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="home.html" class="breadcrumbs-link">
+                  <span class="visually-hidden">Главная</span>
+                </a>
+              </li>
+              <li class="filters-item" aria-current="page">
+                <span>Гостиницы</span>
+              </li>
+            </ul>
+          </nav>
+          <form class="filters-settings" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filters-group filters-checkbox">
+              <legend>Инфраструктура:</legend>
+              <label>
+                <input class="filters-checkbox" type="checkbox" checked name="Бассейн" />
+                Бассейн
+              </label>
+              <label>
+                <input class="filters-checkbox" type="checkbox" checked name="Парковка" />
+                Парковка
+              </label>
+              <label>
+                <input class="filters-checkbox" type="checkbox" name="Wi-Fi" />
+                Wi-Fi
+              </label>
+            </fieldset>
+            <fieldset class="filters-group filters-radio">
+              <legend>Тип жилья:</legend>
+              <label> <input class="filters-radio" type="radio" name="housing-type" value="Hotel" /> Гостиница </label>
+              <label> <input class="filters-radio" type="radio" name="housing-type" value="Motel" /> Мотель </label>
+              <label>
+                <input class="filters-radio" type="radio" name="housing-type" value="Apartments" /> Апартаменты
+              </label>
+            </fieldset>
+            <fieldset class="filters-group filters-price">
+              <legend>Стоимость, ₽:</legend>
+              <input class="filters-price" type="number" placeholder="от" value="0" />
+              <input class="filters-price" type="number" placeholder="до" value="9000" />
+              <div class="filters-price-slider">
+                <input class="min input-ranges" name="range_1" type="range" min="1" max="0" value="9000" />
+                <input class="max input-ranges" name="range_1" type="range" min="1" max="9000" value="9000" />
+              </div>
+            </fieldset>
+            <button class="filters-btn" type="submit">Применить</button>
+            <button class="filters-btn" type="reset">Сбросить</button>
+          </form>
+        </section>
+
+        <div class="preview-hotel">
+          <strong class="preview-hotel-resul-text">
+            Найдено гостиниц:
+            <span id="search-result">38</span>
+          </strong>
+          <div id="price-range">
+            <div class="select-wrapper">
+              <div class="select-arrow"></div>
+              <div class="select-arrow"></div>
+              <select>
+                <option>Сначала дешевые</option>
+                <option>Мы точно в Седоне?</option>
+                <option>Надо было ехать в Турцию</option>
+              </select>
+            </div>
+          </div>
+
+          <ul class="сard-sorting-btn">
+            <li class="сard-sorting-item"></li>
+            <li class="сard-sorting-item"></li>
+            <li class="сard-sorting-item"></li>
+          </ul>
+
+          <ul class="hotels-cards">
+            <li class="hotels-cars-item">
+              <figure class="hotels-cars-img">
+                <img src="./img" alt="Картинка" />
+                <caption>Amara Resort & Spa</caption>
+              </figure>
+              <div class="hotels-card-actions">
+                <span class="hotels-card-text">Гостиница <b>От 1500 ₽</b> </span>
+                <button type="button" class="hotels-cars-details-btn">Подробнее</button>
+                <button type="button" class="hotels-cars-favorite-btn">В избранное</button>
+                <div class="hotels-card-stars-icon"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <section class="search-hotel">
+          <h2 class="search-hotel-title">Заинтересовались</h2>
+          <p class="search-hotel-desc">
+            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+          </p>
+          <a href="catalog.html" class="search-hotel-btn">Поиск гостиницы в Седоне</a>
+
+          <form class="search-hotel-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input type="email" autocapitalize="off" name="email" placeholder="Ваш e-mail" class="search-hotel-email" />
+            <button type="submit" class="search-hotel-btn">Подписаться</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="social">
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <img src="./img/fotter-img/vk-icon.svg" width="47" height="40" alt="Иконка Вконтакте" />
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <img src="./img/fotter-img/telegram-icon.svg" width="47" height="40" alt="Иконка Телеграм" />
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <img src="./img/fotter-img/youtube-icon.svg" width="47" height="40" alt="Иконка Ютуб" />
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+
+          <a href="tel:+7 (812) 812-12-12" class="social-phone">+7 (812) 812-12-12</a>
+
+          <img
+            src="img/fotter-img/logo_htmlacademy.png"
+            alt="Html-academy"
+            width="115"
+            height="33"
+            class="social-logo"
+          />
+        </div>
+      </footer>
+    </wrapper>
+  </body>
+</html>
