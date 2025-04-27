@@ -13,18 +13,6 @@
   font-display: swap;
 }
 
-a,
-a:focus,
-a:active,
-a:visited {
-  outline: none;
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -86,6 +74,20 @@ img {
 }
 
 .navigation-logo {
+  position: relative;
+}
+
+.navigation-logo:focus-visible::before {
+  content: "";
+  position: absolute;
+  left: 18.5%;
+  bottom: 42%;
+  width: 64%;
+  height: 128%;
+  transform: rotate(45deg);
+  box-shadow: 0 0 6px 14px #4ba6e2;
+  z-index: -10;
+  border-radius: 14px;
 }
 
 .navigation-menu {
@@ -100,6 +102,10 @@ img {
   margin: 0;
 }
 
+.reset-list li {
+  list-style: none;
+}
+
 .menu-item {
   padding: 20px 16px;
 }
@@ -112,10 +118,19 @@ img {
   line-height: 1.2;
   text-transform: capitalize;
   white-space: nowrap;
-  color: #000;
+  color: #000000;
   transition-duration: 0.2s;
 }
 
+.reset-link,
+.reset-link:focus,
+.reset-link:active,
+.reset-link:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+.menu-link:focus-visible,
 .menu-link:hover {
   opacity: 0.6;
 }
@@ -138,9 +153,6 @@ img {
   justify-content: flex-end;
   gap: 24px;
 }
-.navigation-item {
-  transition-duration: 0.2s;
-}
 
 .navigation-item:nth-child(2) {
   position: relative;
@@ -152,18 +164,20 @@ img {
   opacity: 1;
   top: -13px;
   left: 8px;
-  color: #fff;
+  color: #ffffff;
   background-color: #7db54f;
   border-radius: 50%;
   padding: 5px;
   font-size: 10px;
 }
 
-.navigation-item:not(:last-child):hover {
-  opacity: 0.6;
+.navigation-link {
+  transition-duration: 0.2s;
 }
 
-.navigation-link {
+.navigation-link:focus-visible,
+.navigation-link:hover {
+  opacity: 0.6;
 }
 
 .navigation-button {
@@ -176,7 +190,7 @@ img {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  color: #fff;
+  color: #ffffff;
   transition: background-color 0.2s;
 }
 
@@ -274,19 +288,19 @@ img {
   line-height: 1.16667;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 .about-sedona-card-title::after {
   content: "";
   width: 60px;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   opacity: 0.3;
 }
 
 .about-sedona-card-title-black::after {
-  background-color: #000;
+  background-color: #000000;
 }
 
 .about-sedona-card-desc {
@@ -296,10 +310,10 @@ img {
   font-size: 18px;
   line-height: 1.16667;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .about-sedona-card-title-black {
-  color: #000;
+  color: #000000;
 }
 
 .about-sedona-card-desc-black {
@@ -338,7 +352,7 @@ img {
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 .holiday-desc {
   margin: 20px 0 64px 0;
@@ -363,29 +377,55 @@ img {
 }
 
 .holiday-item:nth-child(2) {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .holiday-card-icon {
   max-width: 75px;
   margin-inline: auto;
 }
+
 .holiday-card-title {
   max-width: 230px;
-  margin: 30px auto;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.16667;
   text-transform: uppercase;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
+
+.holiday-card-title::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+}
+
+.holiday-card-title-home::before {
+  content: "";
+  background: url("../img/main-img/icon/holiday-sedona-icon-1.svg") 0 0 / 100% 100% no-repeat;
+}
+.holiday-card-title-burger::before {
+  content: "";
+  background: url("../img/main-img/icon/holiday-sedona-icon-2.svg") 0 0 / 100% 100%no-repeat;
+}
+
+.holiday-card-title-souvenir::before {
+  content: "";
+  background: url("../img/main-img/icon/holiday-sedona-icon-3.svg") 0 0 / 100% 100% no-repeat;
+}
+
 .holiday-card-desc {
   max-width: 228px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: #333;
+  color: #333333;
 }
 
 .holiday-item:nth-child(1) .holiday-card-desc {
@@ -402,7 +442,7 @@ img {
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
-  color: #000;
+  color: #000000;
 }
 .search-hotel-desc {
   max-width: 600px;
@@ -417,7 +457,7 @@ img {
   border-radius: 4px;
   padding: 8px 50px;
   background-color: #756157;
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.8;
@@ -439,7 +479,7 @@ img {
 .subscribe-form {
   margin-top: 96px;
   min-height: 415px;
-  background: url("../img/main-img/for-img.jpg") center / 1200px auto no-repeat;
+  background: rgba(0, 0, 0, 0.396) url("../img/main-img/for-img.jpg") center / 1200px auto no-repeat;
   background-size: cover;
 }
 
@@ -455,7 +495,7 @@ img {
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .subscribe-form-desc {
   margin: 20px 0 54px;
@@ -465,16 +505,26 @@ img {
   font-size: 22px;
   line-height: 1.18182;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
-.subscribe-form-box {
+.search-hotel-background-none {
+  background: none;
+}
+.subscribe-form-title-black {
+  color: #000000;
+}
+.subscribe-form-desc-black {
+  color: #000000;
+}
+.subscribe-form-group {
   display: flex;
   justify-content: center;
   max-width: 684px;
   width: 100%;
   margin-inline: auto;
 }
-.subscribe-form-email {
+
+.subscribe-form-group input {
   width: 100%;
   padding: 10px 20px;
   border-radius: 4px 0 0 4px;
@@ -486,11 +536,15 @@ img {
   transition-duration: 0.2s;
 }
 
+.subscribe-form-email-background {
+  background-color: #f2f2f2;
+}
+
 .subscribe-form-email:hover {
   background-color: #e8e8e8;
 }
 
-.subscribe-form-box input:focus-visible {
+.subscribe-form-group input:focus-visible {
   border-left: 3px solid #82b3d3;
   border-top: 3px solid #82b3d3;
   border-bottom: 3px solid #82b3d3;
@@ -498,7 +552,7 @@ img {
   transition-duration: 0.2s;
 }
 
-.subscribe-form-box input[placeholder] {
+.subscribe-form-group input {
   font-family: "ptsans";
   font-weight: 400;
   font-size: 18px;
@@ -517,13 +571,18 @@ img {
   line-height: 1.8;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   transition-duration: 0.2s;
 }
 
+.subscribe-form-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.subscribe-form-btn:focus-visible,
 .subscribe-form-btn:hover {
-  background-color: #64b1e4;
+  background-color: #68a2ca;
+  outline: none;
 }
 
 .footer {
@@ -602,7 +661,7 @@ img {
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
-  color: #000;
+  color: #000000;
   transition-duration: 0.2s;
 }
 
@@ -618,30 +677,103 @@ img {
 
 .social-academy-link {
   min-width: 120px;
+  outline: none;
+}
+.social-academy-link a:focus {
+  outline: none;
 }
 
 .social-academy-link svg {
-  fill: #000;
+  fill: #000000;
   transition-duration: 0.2s;
 }
 
-.social-academy-link:hover svg,
-.social-academy-link:focus-visible svg {
+.social-academy-link a:hover svg,
+.social-academy-link a:focus-visible svg {
   fill: #756157;
 }
 
-.social-academy-link:active svg {
+.social-academy-lin a:active svg {
   fill: #756157;
   opacity: 0.3;
 }
 
 /* ========== cotalog-style =============== */
 
+.filters {
+  background: url("../img/fotter-img/form-img.jpg") center no-repeat;
+  background-size: cover;
+}
 .filters-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 1.3;
   color: #fff;
+  margin: 0;
+}
+
+.filters-container {
+  max-width: 1060px;
+  margin-inline: auto;
+  padding: 35px 20px 70px;
+}
+
+.breadcrumbs {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  padding: 0;
+}
+.breadcrumbs-item {
+  display: flex;
+  column-gap: 10px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  background: url("../img/catalog-img/breadcrumbs-icon.svg") 0 / 100% no-repeat;
+  width: 8px;
+}
+
+.breadcrumbs-link {
+  display: flex;
+  font-size: 16px;
+  line-height: 1.3125;
+  color: #ffffff;
+}
+
+.breadcrumbs-link-home-icon {
+  position: relative;
+}
+
+.breadcrumbs-link-home-icon::before {
+  content: "";
+  align-self: center;
+  background: url("../img/catalog-img/home-icon.svg") 0 0 / 100%no-repeat;
+  width: 13px;
+  height: 15px;
+  display: inline-block;
+}
+
+.filters-settings {
+}
+.filters-group {
+}
+.filters-checkbox {
+}
+.filters-radio {
+}
+.filters-price {
+}
+.filters-price-slider {
+}
+.min {
+}
+.input-ranges {
+}
+.max {
+}
+.filters-btn {
 }
 
 /* Стили для формы */
