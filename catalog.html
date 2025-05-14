@@ -68,32 +68,44 @@
               <fieldset class="filters-group checkbox">
                 <legend>Инфраструктура:</legend>
                 <label class="checkbox-filter">
-                  <input class="checkbox-input" type="checkbox" value="pool" checked name="Pool" />
-                  Бассейн
+                  <input class="visually-hidden checkbox-input" type="checkbox" value="pool" checked name="Pool" />
+                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-label">Бассейн</span>
                 </label>
                 <label class="checkbox-filter">
-                  <input class="checkbox-input" type="checkbox" value="parking" checked name="Parking-option" />
-                  Парковка
+                  <input
+                    class="visually-hidden checkbox-input"
+                    type="checkbox"
+                    value="parking"
+                    checked
+                    name="Parking-option"
+                  />
+                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-label">Парковка</span>
                 </label>
                 <label class="checkbox-filter">
-                  <input class="checkbox-input" type="checkbox" value="wifi" name="Wi-Fi" />
-                  Wi-Fi
+                  <input class="visually-hidden checkbox-input" type="checkbox" value="wifi" name="Wi-Fi" />
+                  <span class="checkbox-mark"></span>
+                  <span class="checkbox-label">Wi-Fi</span>
                 </label>
               </fieldset>
 
               <fieldset class="filters-group radio">
                 <legend>Тип жилья:</legend>
                 <label class="radio-filter">
-                  <input class="radio-input" checked type="radio" name="housing-type" value="Hotel" />
-                  Гостиница
+                  <input class="visually-hidden radio-input" checked type="radio" name="housing-type" value="Hotel" />
+                  <span class="radio-mark"></span>
+                  <span class="radio-label">Гостиница</span>
                 </label>
                 <label class="radio-filter">
-                  <input class="radio-input" type="radio" name="housing-type" value="Motel" />
-                  Мотель
+                  <input class="visually-hidden radio-input" type="radio" name="housing-type" value="Motel" />
+                  <span class="radio-mark"></span>
+                  <span class="radio-label">Мотель</span>
                 </label>
                 <label class="radio-filter">
-                  <input class="radio-input" type="radio" name="housing-type" value="Apartments" />
-                  Апартаменты
+                  <input class="visually-hidden radio-input" type="radio" name="housing-type" value="Apartments" />
+                  <span class="radio-mark"></span>
+                  <span class="radio-label">Апартаменты</span>
                 </label>
               </fieldset>
 
@@ -110,7 +122,9 @@
                 <div class="filters-price range">
                   <div class="range-scale">
                     <div class="range-bar" style="width: 80%; left: 0">
+                      <span class="visually-hidden"> От </span>
                       <button type="button" class="range-btn range-btn-min"></button>
+                      <span class="visually-hidden"> До </span>
                       <button type="button" class="range-btn range-btn-max"></button>
                     </div>
                   </div>
@@ -145,16 +159,19 @@
                 <li class="сard-sorting-item">
                   <a href="#" class="сard-sorting-link list active">
                     <img src="./img/catalog-img/list-icon.svg" width="16" height="14" alt="list-icon" />
+                    <span class="visually-hidden">Карточки</span>
                   </a>
                 </li>
                 <li class="сard-sorting-item">
                   <a href="#" class="сard-sorting-link slideshow">
                     <img src="./img/catalog-img/slideshow-icon.svg" width="16" height="14" alt="slideshow-icon" />
+                    <span class="visually-hidden">По одной</span>
                   </a>
                 </li>
                 <li class="сard-sorting-item">
                   <a href="#" class="сard-sorting-link tile">
                     <img src="./img/catalog-img/tile-icon.svg" width="16" height="14" alt="tile-icon" />
+                    <span class="visually-hidden">Списком</span>
                   </a>
                 </li>
               </ul>
@@ -165,7 +182,7 @@
                 <a href="#" class="hotels-cars-link reset-link">
                   <figure class="hotels-cards-img">
                     <img src="./img/catalog-img/cards-img-1.jpg" width="300" height="212" alt="Вид на звезды" />
-                    <span>Amara Resort & Spa</span>
+                    <h3 class="hotels-cards-title"> Amara Resort & Spa </h3>
                   </figure>
                 </a>
                 <div class="hotels-cards-actions">
@@ -175,12 +192,12 @@
                     <button type="button" class="hotels-cards-favorite-btn">В избранное</button>
                   </div>
                   <div class="hotels-cards-stars">
-                    <span class="hotels-cards-star-icon">
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                    </span>
+                    <div class="hotels-cards-star-item">
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                    </div>
                     <strong class="hotels-cards-rating">Рейтинг: 8,5</strong>
                   </div>
                 </div>
@@ -189,7 +206,7 @@
                 <a href="#" class="hotels-cars-link reset-link">
                   <figure class="hotels-cards-img">
                     <img src="./img/catalog-img/cards-img-2.jpg" width="300" height="212" alt="Вид на скалу" />
-                    <span>Villas at Poco Diablo</span>
+                    <h3 class="hotels-cards-title"> Villas at Poco Diablo </h3>
                   </figure>
                 </a>
                 <div class="hotels-cards-actions">
@@ -199,12 +216,12 @@
                     <button type="button" class="hotels-cards-favorite-btn active">В избранном</button>
                   </div>
                   <div class="hotels-cards-stars">
-                    <span class="hotels-cards-star-icon">
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                    </span>
+                    <div class="hotels-cards-star-item">
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                    </div>
                     <strong class="hotels-cards-rating">Рейтинг: 9,5</strong>
                   </div>
                 </div>
@@ -213,7 +230,7 @@
                 <a href="#" class="hotels-cars-link reset-link">
                   <figure class="hotels-cards-img">
                     <img src="./img/catalog-img/cards-img-3.jpg" width="300" height="212" alt="Вид на скалу" />
-                    <span>Desert Quail Inn</span>
+                    <h3 class="hotels-cards-title"> Desert Quail Inn </h3>
                   </figure>
                 </a>
                 <div class="hotels-cards-actions">
@@ -223,11 +240,11 @@
                     <button type="button" class="hotels-cards-favorite-btn">В избранное</button>
                   </div>
                   <div class="hotels-cards-stars">
-                    <span class="hotels-cards-star-icon">
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                    </span>
+                    <div class="hotels-cards-star-item">
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                    </div>
                     <strong class="hotels-cards-rating">Рейтинг: 6,9</strong>
                   </div>
                 </div>
@@ -236,7 +253,7 @@
                 <a href="#" class="hotels-cars-link reset-link">
                   <figure class="hotels-cards-img">
                     <img src="./img/catalog-img/cards-img-4.jpg" width="300" height="212" alt="Вид на скалу и звезды" />
-                    <span>GreenTree Inn</span>
+                    <h3 class="hotels-cards-title"> GreenTree Inn </h3>
                   </figure>
                 </a>
                 <div class="hotels-cards-actions">
@@ -246,10 +263,10 @@
                     <button type="button" class="hotels-cards-favorite-btn">В избранное</button>
                   </div>
                   <div class="hotels-cards-stars">
-                    <span class="hotels-cards-star-icon">
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                      <img src="./img/catalog-img/star-card-img.svg" width="18" height="17" alt="Рейтинг" />
-                    </span>
+                    <div class="hotels-cards-star-item">
+                      <span class="hotels-cards-star-icon"> </span>
+                      <span class="hotels-cards-star-icon"> </span>
+                    </div>
                     <strong class="hotels-cards-rating">Рейтинг: 5,0</strong>
                   </div>
                 </div>
@@ -281,8 +298,10 @@
 
         <section class="subscribe-form search-hotel-background-none">
           <div class="subscribe-form__container">
-            <h2 class="subscribe-form-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-form-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <h2 class="subscribe-form-title color-black">Подпишитесь на рассылку</h2>
+            <p class="subscribe-form-desc color-black"
+              >Только полезная информация и никакого спама, честное бойскаутское!</p
+            >
             <form class="subscribe-form-group" action="https://echo.htmlacademy.ru/" method="post">
               <label for="email-input" class="visually-hidden">Ваш e-mail</label>
               <input
