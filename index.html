@@ -11,7 +11,7 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <div class="navigation-container">
+        <div class="navigation-container container">
           <a href="index.html" class="navigation-logo reset-link">
             <img src="./img/header-img/head-logo.svg" width="140" height="70" alt="City of Sedona" />
           </a>
@@ -38,7 +38,6 @@
                 <span class="visually-hidden"> Избранное </span>
                 <a class="navigation-link reset-link" href="#">
                   <img src="./img/header-img/head-like.svg" width="20" height="20" alt="Избраное" />
-                  <span></span>
                 </a>
               </li>
               <li class="navigation-item">
@@ -130,10 +129,10 @@
             Укажите предполагаемые даты поездки, <br />
             и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
-          <a href="catalog.html" class="search-hotel-link reset-link">Поиск гостиницы в Седоне</a>
+          <button class="search-hotel-btn" type="submit">Поиск гостиницы в Седоне</button>
         </section>
 
-        <section class="subscribe-form" aria-labelledby="subscribe-heading">
+        <section class="subscribe-form">
           <div class="subscribe-form__container">
             <h2 class="subscribe-form-title">Подпишитесь на рассылку</h2>
             <p class="subscribe-form-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -229,6 +228,74 @@
           </div>
         </div>
       </footer>
+    </div>
+
+    <div class="modal">
+      <div class="modal-container">
+        <button class="modal-button-close" type="button">
+          <span class="visually-hidden"> Скрыть модальное окно </span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title"></h2>
+          <form class="modal-form-items" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal-item">
+              <label for="date-check-in">Дата заезда:</label>
+              <div class="modal-date-in">
+                <input
+                  id="date-check-in"
+                  class="modal-input-date"
+                  type="text"
+                  name="check-in"
+                  value="27 апреля 2020"
+                  placeholder="Укажите дату"
+                  required=""
+                />
+                <p class="modal-text-error">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </div>
+            <div class="modal-item">
+              <label for="date-check-in">Дата выезда:</label>
+              <div class="modal-date-out">
+                <input
+                  id="date-check-out"
+                  class="modal-input-date"
+                  type="text"
+                  name="check-out"
+                  value="27 апреля 2020"
+                  placeholder="Укажите дату"
+                  required=""
+                />
+                <p class="modal-text-message">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </div>
+            <div class="modal-item quantity">
+              <div class="quantity-item">
+                <label for="adult">Взрослые:</label>
+                <div class="quantity-box">
+                  <button class="quantity-btn quantity-btn-min" type="button"></button>
+                  <input id="adult" type="number" min="1" value="2" />
+                </div>
+              </div>
+              <div class="quantity-item">
+                <label for="adult">children</label>
+                <div class="quantity-tooltip">
+                  <button class="quantity-tooltip-btn">i</button>
+                  <span class="quantity-tooltip-text"
+                    >Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                    размещаются бесплатно.
+                  </span>
+                </div>
+                <div class="quantity-box">
+                  <button class="quantity-btn quantity-btn-min" type="button"></button>
+                  <input id="children" type="number" min="0" value="2" placeholder="0" />
+                  <button class="quantity-btn quantity-btn-over" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
