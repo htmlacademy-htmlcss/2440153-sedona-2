@@ -748,12 +748,12 @@ img {
   transition-duration: 0.2s;
 }
 
-.social-academy-link a:hover svg,
-.social-academy-link a:focus-visible svg {
+.social-academy-link:hover svg,
+.social-academy-link:focus-visible svg {
   fill: #756157;
 }
 
-.social-academy-link a:active svg {
+.social-academy-link:active svg {
   fill: #756157;
   opacity: 0.3;
 }
