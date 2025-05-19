@@ -1142,8 +1142,7 @@ img {
   text-align: right;
 }
 
-.select-wrap {
-}
+.select-wrap {}
 
 .select-box {
   min-width: 292px;
@@ -1351,10 +1350,6 @@ img {
   flex-wrap: wrap;
   gap: 8px;
 }
-
-/* .pagination-item:not(:last-child) {
-  margin-right: 8px;
-} */
 
 .pagination-link {
   display: inline-block;
