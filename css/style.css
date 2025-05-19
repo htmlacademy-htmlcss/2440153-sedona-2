@@ -1348,11 +1348,13 @@ img {
   margin-top: 43px;
   padding-top: 40px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.pagination-item:not(:last-child) {
+/* .pagination-item:not(:last-child) {
   margin-right: 8px;
-}
+} */
 
 .pagination-link {
   display: inline-block;
@@ -1391,6 +1393,10 @@ img {
 .pagination-link-ellipsis {
   color: #000000;
   pointer-events: none;
+  background-color: transparent;
+}
+
+.pagination-link-ellipsis:focus-visible {
   background-color: transparent;
 }
 
