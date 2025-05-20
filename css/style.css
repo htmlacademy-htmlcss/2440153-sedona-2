@@ -99,6 +99,7 @@ img {
 .navigation-menu {
   display: flex;
   justify-content: space-between;
+  margin-left: 30px;
 }
 
 .menu-list {
@@ -140,7 +141,7 @@ img {
 
 .menu-link:focus-visible,
 .menu-link:hover {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .menu-link-current {
@@ -156,21 +157,32 @@ img {
 }
 
 .navigation-list {
-  flex: 0 0 280px;
+  margin-bottom: 6px;
+  flex: 0 1 280px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: center;
   justify-content: flex-end;
-  gap: 24px;
+  padding: 10px 0;
 }
 
-.navigation-item:nth-child(2) {
+.navigation-item:not(:last-child) {
+  margin-left: 12px;
+}
+
+.navigation-item:last-child {
+  margin-left: 20px;
+}
+
+.selected {
   position: relative;
 }
 
-.navigation-item:nth-child(2)::after {
+.selected::after {
   content: "12";
   position: absolute;
-  opacity: 1;
+  line-height: 1;
   top: -13px;
   left: 8px;
   color: #ffffff;
@@ -181,12 +193,17 @@ img {
 }
 
 .navigation-link {
+  min-width: 20px;
+}
+
+.navigation-link svg {
+  fill: #000000;
   transition-duration: 0.2s;
 }
 
-.navigation-link:focus-visible,
-.navigation-link:hover {
-  opacity: 0.6;
+.navigation-link svg:focus-visible,
+.navigation-link svg:hover {
+  fill: rgba(0, 0, 0, 0.6);
 }
 
 .navigation-button {
@@ -222,7 +239,7 @@ img {
   max-width: 1200px;
   margin-inline: auto;
   min-height: 485px;
-  background: url("../img/main-img/head-background.jpg") 50% 50% / 1200px 485px no-repeat;
+  background: #82b3d3 url("../img/main-img/head-background.jpg") 50% 50% / 1200px 485px no-repeat;
 }
 
 .head-logo img {
@@ -252,7 +269,7 @@ img {
 .about-sedona-desk {
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.18182;
+  line-height: 1.18;
   text-align: center;
   margin: 25px 0 90px 0;
   color: #333333;
@@ -276,7 +293,7 @@ img {
 }
 
 .about-sedona-content {
-  flex: 1 1 33.333%;
+  flex: 0 1 400px;
   padding: 30px;
   min-width: 250px;
   margin-inline: auto;
@@ -285,6 +302,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .about-sedona-card-title {
@@ -296,7 +314,7 @@ img {
   row-gap: 30px;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.16;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
@@ -319,7 +337,7 @@ img {
   margin: 30px auto 0;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.16;
   text-align: center;
   color: #ffffff;
 }
@@ -373,7 +391,7 @@ img {
   margin-top: 20px;
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.18182;
+  line-height: 1.18;
   text-align: center;
   color: #333333;
 }
@@ -410,7 +428,7 @@ img {
   row-gap: 30px;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.16;
   text-transform: uppercase;
   text-align: center;
   color: #000000;
@@ -469,7 +487,7 @@ img {
   margin: 20px auto 54px auto;
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.18182;
+  line-height: 1.18;
   text-align: center;
   color: #333333;
 }
@@ -478,6 +496,7 @@ img {
   border-radius: 4px;
   padding: 8px 50px;
   background-color: #756157;
+  font-family: inherit;
   color: #ffffff;
   font-weight: 700;
   font-size: 20px;
@@ -528,7 +547,7 @@ img {
   margin-inline: auto;
   font-weight: 400;
   font-size: 22px;
-  line-height: 1.18182;
+  line-height: 1.18;
   text-align: center;
   color: #ffffff;
 }
@@ -539,6 +558,7 @@ img {
 
 .search-hotel-background-none {
   background: none;
+  margin-top: 60px;
 }
 
 .subscribe-form-title-black,
@@ -557,6 +577,11 @@ img {
 .subscribe-form-group input {
   width: 100%;
   padding: 10px 20px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  padding-left: 20px;
   border-radius: 4px 0 0 4px;
   border: none;
   outline: none;
@@ -586,21 +611,13 @@ img {
   transition-duration: 0.2s;
 }
 
-.subscribe-form-group input {
-  font-family: "ptsans";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.33333;
-  padding-left: 20px;
-}
-
 .subscribe-form-btn {
   padding: 8px 50px;
   border: none;
   background-color: #82b3d3;
   border-radius: 0 4px 4px 0;
   font-weight: 700;
-  font-family: "ptsans";
+  font-family: inherit;
   font-size: 20px;
   line-height: 1.8;
   text-transform: uppercase;
@@ -623,14 +640,15 @@ img {
 /*================ Footer style ============= */
 
 .footer {
-  min-height: 120px;
+  margin: 40px 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .social {
   padding: 0 70px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -703,6 +721,7 @@ img {
   text-align: center;
   color: #000000;
   transition-duration: 0.2s;
+  white-space: nowrap;
 }
 
 .social-number:hover,
@@ -729,12 +748,12 @@ img {
   transition-duration: 0.2s;
 }
 
-.social-academy-link a:hover svg,
-.social-academy-link a:focus-visible svg {
+.social-academy-link:hover svg,
+.social-academy-link:focus-visible svg {
   fill: #756157;
 }
 
-.social-academy-lin a:active svg {
+.social-academy-link:active svg {
   fill: #756157;
   opacity: 0.3;
 }
@@ -742,7 +761,7 @@ img {
 /* ========== cotalog-style =============== */
 
 .filters {
-  background: #6321a5bb url("../img/fotter-img/form-img.jpg") center no-repeat;
+  background: #6321a5bb url("../img/catalog-img/filtr-fon-img.jpg") center no-repeat;
   background-size: cover;
   margin-bottom: 50px;
 }
@@ -751,7 +770,7 @@ img {
   font-weight: 700;
   font-size: 60px;
   line-height: 1.3;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -763,6 +782,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 10px;
   align-items: center;
   margin: 8px 0 40px 0;
@@ -782,7 +802,7 @@ img {
 .breadcrumbs-link {
   display: flex;
   font-size: 16px;
-  line-height: 1.3125;
+  line-height: 1.31;
   color: #ffffff;
 }
 
@@ -829,7 +849,7 @@ img {
   line-height: 1.2;
   text-transform: capitalize;
   color: #ffffff;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   padding: 0;
 }
 
@@ -838,7 +858,7 @@ img {
   cursor: pointer;
   transition-duration: 0.2s;
   position: relative;
-  padding-left: 32px;
+  padding-left: 36px;
 }
 
 .checkbox-mark,
@@ -868,7 +888,7 @@ img {
 .radio-label {
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.27778;
+  line-height: 1.27;
   color: #ffffff;
 }
 
@@ -916,6 +936,7 @@ img {
 
 .price-inputs {
   display: inline-flex;
+  align-items: center;
   justify-content: space-between;
   gap: 2px;
 }
@@ -923,10 +944,11 @@ img {
 .price-inputs input {
   max-width: 143px;
   min-height: 48px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1;
-  padding: 0 17px;
+  line-height: 1.33;
+  padding: 3px 18px 0;
   box-sizing: border-box;
   outline: none;
   transition-duration: 0.2s;
@@ -941,12 +963,16 @@ img {
   position: relative;
 }
 
+.price-min [value="0"] {
+  align-self: center;
+}
+
 .price-min::after {
   content: "от";
   position: absolute;
   top: 50%;
-  right: 20px;
-  line-height: 1.33333;
+  right: 18px;
+  line-height: 1.33;
   font-weight: 400;
   transform: translateY(-50%);
   font-size: 18px;
@@ -957,9 +983,9 @@ img {
   content: "до";
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 16px;
   width: 23px;
-  line-height: 1.33333;
+  line-height: 1.33;
   font-weight: 400;
   transform: translateY(-50%);
   font-size: 18px;
@@ -999,8 +1025,8 @@ img {
 .filters-btns {
   display: flex;
   flex-direction: column;
-  margin-top: 57px;
-  gap: 30px;
+  margin-top: 56px;
+  gap: 32px;
   margin-left: 70px;
 }
 
@@ -1008,7 +1034,7 @@ img {
   min-width: 191px;
   max-width: 191px;
   background-color: #82b3d3;
-  font-family: "ptsans", sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
@@ -1020,10 +1046,6 @@ img {
   border: none;
   outline: none;
   cursor: pointer;
-}
-
-.filters-btn:active {
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .filters-btn:hover,
@@ -1053,7 +1075,7 @@ img {
 }
 
 .range {
-  margin-top: 46px;
+  margin-top: 27px;
 }
 
 .range-scale {
@@ -1101,34 +1123,39 @@ img {
 
 .preview-hotel-navigation {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 70px;
   margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .preview-hotel-resul-text {
+  align-self: center;
   font-weight: 700;
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-.select-wrap {
-  min-width: 292px;
+.select {
+  flex: 1 0 292px;
+  text-align: right;
 }
 
+.select-wrap {}
+
 .select-box {
-  width: 100%;
+  min-width: 292px;
   outline: none;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.16;
   padding: 12px 18px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   appearance: none;
-  background: url("../img/catalog-img/select-icon.svg") 90% 55% / 12px 10px no-repeat;
+  background: url("../img/catalog-img/select-icon.svg") 94% 52% / 12px 10px no-repeat;
   transition-duration: 0.2s;
 }
 
@@ -1139,11 +1166,16 @@ img {
 
 .сard-sorting {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
+.сard-sorting-item {
+  max-height: 48px;
+}
+
 .сard-sorting-link {
-  display: inline-block;
+  display: inline-flex;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 15px 14px;
@@ -1151,8 +1183,8 @@ img {
   outline: none;
 }
 
-.сard-sorting-link img {
-  min-width: 16px;
+.сard-sorting-link svg {
+  fill: #000000;
 }
 
 .сard-sorting-link.active {
@@ -1175,7 +1207,6 @@ img {
 .hotels-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
   gap: 20px;
 }
 
@@ -1183,15 +1214,15 @@ img {
   max-width: 340px;
   display: inline-flex;
   flex-direction: column;
-  border: 1px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .hotels-cards-img {
-  width: 300px;
-  margin: 0 auto;
+  max-width: 300px;
+  margin: 0;
 }
 
 .hotels-cards-img img {
@@ -1201,7 +1232,7 @@ img {
 .hotels-cards-title {
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.16;
   color: #000000;
   margin: 16px 0;
   text-align: start;
@@ -1211,7 +1242,7 @@ img {
 .hotels-cards-text b {
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.16;
   color: #333333;
 }
 
@@ -1232,7 +1263,6 @@ img {
   min-width: 140px;
   min-height: 36px;
   padding: 8px 16px;
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -1242,6 +1272,7 @@ img {
   text-align: center;
   align-content: center;
   border: none;
+  outline: none;
   cursor: pointer;
   border-radius: 4px;
   transition-duration: 0.2s;
@@ -1290,12 +1321,12 @@ img {
 
 .hotels-cards-star-item {
   display: flex;
-  gap: 6px;
+  gap: 7px;
 }
 
 .hotels-cards-star-icon {
   width: 17px;
-  background: url("../img/catalog-img/star-card-img.svg") center / 17px 17px no-repeat;
+  background: url("../img/catalog-img/star-card-img.svg") center / 18px 17px no-repeat;
 }
 
 .hotels-cards-rating {
@@ -1313,12 +1344,11 @@ img {
 
 .pagination {
   border-top: 1px solid #e5e5e5;
+  margin-top: 43px;
   padding-top: 40px;
   display: flex;
-}
-
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .pagination-link {
@@ -1342,8 +1372,6 @@ img {
 .pagination-link:hover,
 .pagination-link:focus-visible {
   background-color: #68a2ca;
-  transform: translateY(-3px);
-  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 1);
 }
 
 .pagination-link:active {
@@ -1360,6 +1388,10 @@ img {
 .pagination-link-ellipsis {
   color: #000000;
   pointer-events: none;
+  background-color: transparent;
+}
+
+.pagination-link-ellipsis:focus-visible {
   background-color: transparent;
 }
 
@@ -1458,7 +1490,7 @@ img {
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.33333;
+  line-height: 1.33;
   color: #000000;
   padding: 12px 20px;
   background: #f2f2f2 url("../img/catalog-img/calendar-input-icon.svg") 95% center no-repeat;
@@ -1468,7 +1500,7 @@ img {
   margin: 4px 0 0 20px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.3125;
+  line-height: 1.31;
 }
 
 .modal-text-error {
@@ -1516,7 +1548,7 @@ img {
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.11111;
+  line-height: 1.11;
   text-align: center;
   color: #000000;
 }
@@ -1524,7 +1556,11 @@ img {
 .quantity-box input[type="number"]::-webkit-inner-spin-button,
 .quantity-box input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0;
+  appearance: none;
+}
+
+.quantity-box input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .quantity-btn {
