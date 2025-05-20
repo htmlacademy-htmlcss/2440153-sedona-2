@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
     <div class="wrapper">
-      <header class="page-header">
+      <header class="page-header" data-test="page-header">
         <div class="navigation-container container">
           <a class="navigation-logo reset-link" href="index.html">
             <img src="./img/header-img/head-logo.svg" width="140" height="70" alt="City of Sedona">
@@ -57,10 +58,10 @@
         </div>
       </header>
 
-      <main class="main">
-        <div class="filters">
+      <main class="main" data-test="main">
+        <div class="filters" data-test="filters">
           <div class="filters-container">
-            <section aria-label="Хлебные крошки">
+            <section aria-label="Хлебные крошки" data-test="bread-crumbs">
               <h1 class="filters-title">Гостиницы Седоны</h1>
               <ul class="breadcrumbs reset-list">
                 <li class="breadcrumbs-item">
@@ -143,7 +144,7 @@
           </div>
         </div>
 
-        <div class="preview-hotel">
+        <div class="preview-hotel" data-test="preview-hotel">
           <div class="preview-hotel-container container">
             <div class="preview-hotel-navigation">
               <strong class="preview-hotel-resul-text">
@@ -208,7 +209,7 @@
               </ul>
             </div>
 
-            <section class="hotels-cards">
+            <section class="hotels-cards" data-test="hotels-cards">
               <h2 class="visually-hidden">Гостиницы Седоны</h2>
               <ul class="hotels-cards reset-list">
                 <li class="hotels-cards-item">
@@ -330,7 +331,7 @@
           </div>
         </div>
 
-        <section class="subscribe-form search-hotel-background-none">
+        <section class="subscribe-form search-hotel-background-none" data-test="subscribe-form">
           <div class="subscribe-form__container">
             <h2 class="subscribe-form-title color-black">Подпишитесь на рассылку</h2>
             <p class="subscribe-form-desc color-black">Только полезная информация и никакого спама, честное
@@ -345,7 +346,7 @@
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="footer" data-test="footer">
         <div class="social">
           <ul class="social-list reset-list">
             <li class="social-item">
